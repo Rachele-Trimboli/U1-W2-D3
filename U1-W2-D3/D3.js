@@ -152,19 +152,19 @@ for(i=0; i < starWarsCharacters.length; i++ ){
   let eye_color = starWarsCharacters[i].eye_color
   switch(eye_color){
     case 'blue':
-      eyeColor.blue.push(eye_color)
+      eyeColor.blue.push(starWarsCharacters[i])
     break
     case 'yellow':
-        eyeColor.yellow.push(eye_color)
+        eyeColor.yellow.push(starWarsCharacters[i])
     break  
     case 'brown':
-        eyeColor.brown.push(eye_color)
+        eyeColor.brown.push(starWarsCharacters[i])
     break  
     case 'red':
-        eyeColor.red.push(eye_color)
+        eyeColor.red.push(starWarsCharacters[i])
     break  
     default:
-        eyeColor.blue_gray.push(eye_color)
+        eyeColor.blue_gray.push(starWarsCharacters[i])
   }
 }
 console.log(eyeColor)
@@ -236,12 +236,13 @@ console.log(starWarsCharacters)
  
   for(k=0; k < femaleCharacters.length; k++ ){
     for(i=0; i < charactersNames.length; i++ ){
-     let femalename = femaleCharacters[k].name
-   let other = charactersNames[i].name
+    //  let femalename = femaleCharacters[k].name
+    // let other = charactersNames[i].name
+  
 
-   if(other ===  femalename)
+   if(charactersNames[i].name ===  femaleCharacters[k].name)
   delete charactersNames[i].name
-    }}
+}}
 console.log(charactersNames)
 // ci ho propvato ma non mi viene volevo togliere gli oggetti con nomi femminili dal charactersNames
 
