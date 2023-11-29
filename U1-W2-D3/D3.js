@@ -233,13 +233,17 @@ console.log(starWarsCharacters)
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
   */
- for(i=0; i < starWarsCharacters.length; i++ ){
-   let femalename = femaleCharacters[i].name
-   let other = starWarsCharacters[i].name
-   if(starWarsCharacters[i].name == femaleCharacters[i].name)
-  delete starWarsCharacters[i].name
-}
-console.log(starWarsCharacters)
+ 
+  for(k=0; k < femaleCharacters.length; k++ ){
+    for(i=0; i < charactersNames.length; i++ ){
+     let femalename = femaleCharacters[k].name
+   let other = charactersNames[i].name
+
+   if(other ===  femalename)
+  delete charactersNames[i].name
+    }}
+console.log(charactersNames)
+// ci ho propvato ma non mi viene volevo togliere gli oggetti con nomi femminili dal charactersNames
 
 
 
